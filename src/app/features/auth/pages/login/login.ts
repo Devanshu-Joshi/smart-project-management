@@ -6,6 +6,7 @@ import { InputTextModule } from 'primeng/inputtext';
 import { PasswordModule } from 'primeng/password';
 import { ButtonModule } from 'primeng/button';
 import { AuthService } from '../../../../core/services/auth';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -24,7 +25,7 @@ export class Login {
 
   private fb = inject(FormBuilder);
 
-  constructor(public auth: AuthService) { }
+  constructor(public auth: AuthService, private router: Router) { }
 
   loginForm = this.fb.nonNullable.group({
     email: ['', [Validators.required, Validators.email]],
@@ -42,6 +43,7 @@ export class Login {
       // ✅ LOGIN SUCCESS
       console.log('Login successful');
       alert('Login successful');
+      this.router.navigate(['/']);
       // redirect or show message
 
     } catch (err: any) {
