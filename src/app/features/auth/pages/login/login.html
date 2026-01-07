@@ -1,1 +1,19 @@
-<p>login works!</p>
+<div class="login-wrapper">
+    <p-card header="Welcome Back">
+        <form [formGroup]="loginForm" (ngSubmit)="submit()" class="login-form">
+
+            <div class="field">
+                <label>Email</label>
+                <input pInputText type="email" formControlName="email" placeholder="you@example.com" />
+            </div>
+
+            <div class="field">
+                <label>Password</label>
+                <p-password formControlName="password" placeholder="••••••••" [feedback]="false" toggleMask />
+            </div>
+
+            <button pButton type="submit" label="Login" class="w-full" [disabled]="loginForm.invalid"></button>
+
+        </form>
+    </p-card>
+</div>
