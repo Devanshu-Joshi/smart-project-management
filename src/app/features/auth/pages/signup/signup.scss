@@ -1,0 +1,39 @@
+.signup-wrapper {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+}
+
+p-card {
+    width: 360px;
+}
+
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+label {
+    font-size: 0.85rem;
+    color: #555;
+}
+
+.login-text {
+    text-align: center;
+    font-size: 0.85rem;
+
+    a {
+        color: var(--primary-color);
+        text-decoration: none;
+        font-weight: 600;
+    }
+}

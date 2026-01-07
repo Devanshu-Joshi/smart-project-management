@@ -1,0 +1,32 @@
+<div class="signup-wrapper">
+    <p-card header="Create Account" subheader="Join us in just a minute">
+        <form [formGroup]="signupForm" (ngSubmit)="submit()" class="signup-form">
+
+            <div class="field">
+                <label>Name</label>
+                <input pInputText formControlName="name" placeholder="John Doe" />
+            </div>
+
+            <div class="field">
+                <label>Email</label>
+                <input pInputText formControlName="email" placeholder="you@email.com" />
+            </div>
+
+            <div class="field">
+                <label>Password</label>
+                <p-password formControlName="password" placeholder="••••••••" [toggleMask]="true" [feedback]="true" />
+            </div>
+
+            <p-button type="submit" label="Sign Up" icon="pi pi-user-plus" styleClass="w-full"
+                [disabled]="signupForm.invalid" />
+
+            <p-divider />
+
+            <p class="login-text">
+                Already have an account?
+                <a routerLink="/login">Login</a>
+            </p>
+
+        </form>
+    </p-card>
+</div>

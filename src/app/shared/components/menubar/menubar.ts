@@ -6,7 +6,7 @@ import { AvatarModule } from 'primeng/avatar';
 import { InputTextModule } from 'primeng/inputtext';
 import { CommonModule } from '@angular/common';
 import { Ripple } from 'primeng/ripple';
-import { Auth } from '../../../core/services/auth';
+import { AuthService } from '../../../core/services/auth';
 import { Button } from 'primeng/button';
 import { AuthRoutingModule } from "../../../features/auth/auth-routing-module";
 import { RouterModule } from '@angular/router';
@@ -21,7 +21,7 @@ import { TooltipModule } from 'primeng/tooltip';
 })
 export class Menubar implements OnInit {
 
-  constructor(public authService: Auth, public themeService: Theme) { }
+  constructor(public authService: AuthService, public themeService: Theme) { }
 
   items: MenuItem[] | undefined;
 
