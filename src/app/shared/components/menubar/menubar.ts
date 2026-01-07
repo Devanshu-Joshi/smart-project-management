@@ -7,19 +7,21 @@ import { InputTextModule } from 'primeng/inputtext';
 import { CommonModule } from '@angular/common';
 import { Ripple } from 'primeng/ripple';
 import { Auth } from '../../../core/services/auth';
-import { Button } from '../button/button';
+import { Button } from 'primeng/button';
 import { AuthRoutingModule } from "../../../features/auth/auth-routing-module";
 import { RouterModule } from '@angular/router';
+import { Theme } from '../../../core/services/theme';
+import { TooltipModule } from 'primeng/tooltip';
 
 @Component({
   selector: 'app-menubar',
-  imports: [MenubarModule, BadgeModule, AvatarModule, InputTextModule, Ripple, CommonModule, Button, AuthRoutingModule, RouterModule],
+  imports: [MenubarModule, BadgeModule, AvatarModule, InputTextModule, Ripple, CommonModule, Button, AuthRoutingModule, RouterModule, TooltipModule],
   templateUrl: './menubar.html',
   styleUrl: './menubar.scss',
 })
 export class Menubar implements OnInit {
 
-  constructor(public authService: Auth) { }
+  constructor(public authService: Auth, public themeService: Theme) { }
 
   items: MenuItem[] | undefined;
 

@@ -15,7 +15,10 @@ export const appConfig: ApplicationConfig = {
     providePrimeNG({
       ripple: true,
       theme: {
-        preset: MyPreset
+        preset: MyPreset,
+        options: {
+          darkModeSelector: '.dark-mode'
+        }
       }
     })
   ]

@@ -27,12 +27,20 @@
 
         <ng-template #end>
             <div class="flex items-center gap-2">
-                <input type="text" pInputText placeholder="Search" class="w-36" />
+                <!-- <input type="text" pInputText placeholder="Search" class="w-36" /> -->
+
+                <p-button class="mr-3 cursor-pointer" styleClass="!bg-transparent !border-none !text-inherit"
+                    [icon]="themeService.isDarkMode() ? 'pi pi-sun' : 'pi pi-moon'"
+                    [pTooltip]=" themeService.isDarkMode() ? 'Light Mode' : 'Dark Mode'" tooltipPosition="bottom"
+                    tooltipStyleClass="small-tooltip" showDelay="1000" hideDelay="300"
+                    (click)="themeService.toggleDarkMode()">
+                </p-button>
+
                 @if (authService.isLoggedIn()) {
                 <p-avatar image="https://primefaces.org/cdn/primeng/images/demo/avatar/amyelsner.png" shape="circle" />
                 }
                 @else {
-                <app-button btnText="Login"></app-button>
+                <p-button label="Login" routerLink="/login" />
                 }
             </div>
         </ng-template>
