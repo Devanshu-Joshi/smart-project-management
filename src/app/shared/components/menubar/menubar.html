@@ -5,7 +5,7 @@
         </ng-template>
 
         <ng-template #item let-item let-root="root">
-            <a pRipple class="flex items-center p-menubar-item-link">
+            <a pRipple class="flex items-center p-menubar-item-link" routerLink="{{ item.routerLink }}">
                 <span>{{ item.label }}</span>
 
                 @if (item.badge) {

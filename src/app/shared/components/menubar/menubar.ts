@@ -8,10 +8,12 @@ import { CommonModule } from '@angular/common';
 import { Ripple } from 'primeng/ripple';
 import { Auth } from '../../../core/services/auth';
 import { Button } from '../button/button';
+import { AuthRoutingModule } from "../../../features/auth/auth-routing-module";
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-menubar',
-  imports: [MenubarModule, BadgeModule, AvatarModule, InputTextModule, Ripple, CommonModule, Button],
+  imports: [MenubarModule, BadgeModule, AvatarModule, InputTextModule, Ripple, CommonModule, Button, AuthRoutingModule, RouterModule],
   templateUrl: './menubar.html',
   styleUrl: './menubar.scss',
 })
@@ -26,6 +28,7 @@ export class Menubar implements OnInit {
       {
         label: 'Home',
         icon: 'pi pi-home',
+        routerLink: '/',
       },
       {
         label: 'Projects',
