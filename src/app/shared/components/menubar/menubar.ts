@@ -6,13 +6,19 @@ import { AvatarModule } from 'primeng/avatar';
 import { InputTextModule } from 'primeng/inputtext';
 import { CommonModule } from '@angular/common';
 import { Ripple } from 'primeng/ripple';
+import { Auth } from '../../../core/services/auth';
+import { Button } from '../button/button';
+
 @Component({
   selector: 'app-menubar',
-  imports: [MenubarModule, BadgeModule, AvatarModule, InputTextModule, Ripple, CommonModule],
+  imports: [MenubarModule, BadgeModule, AvatarModule, InputTextModule, Ripple, CommonModule, Button],
   templateUrl: './menubar.html',
   styleUrl: './menubar.scss',
 })
 export class Menubar implements OnInit {
+
+  constructor(public authService: Auth) { }
+
   items: MenuItem[] | undefined;
 
   ngOnInit() {
