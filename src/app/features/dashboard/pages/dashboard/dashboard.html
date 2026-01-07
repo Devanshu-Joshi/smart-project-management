@@ -1,1 +1,5 @@
-<p>dashboard works!</p>
+<div class="card flex flex-wrap gap-4 justify-center">
+    <p-button label="Login Page" routerLink="/auth/login" />
+    <p-button label="Sign up page" severity="secondary" routerLink="/auth/signup" />
+    <p-button label="Log out" severity="success" (onClick)="logout()" />
+</div>
