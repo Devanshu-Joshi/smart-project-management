@@ -3,6 +3,36 @@ import { definePreset } from '@primeuix/themes';
 import Aura from '@primeuix/themes/aura';
 
 const MyPreset = definePreset(Aura, {
+    components: {
+        button: {
+            colorScheme: {
+                light: {
+                    root: {
+                        primary: {
+                            color: '{stone.50}'
+                        },
+                        paddingX: '10px',
+                        paddingY: '5px',
+                        label: {
+                            fontWeight: 'bold'
+                        },
+                    }
+                },
+                dark: {
+                    root: {
+                        primary: {
+                            color: '{stone.50}'
+                        },
+                        paddingX: '10px',
+                        paddingY: '5px',
+                        label: {
+                            fontWeight: 'bold'
+                        },
+                    }
+                }
+            }
+        }
+    },
     semantic: {
         primary: {
             50: '{rose.50}',
